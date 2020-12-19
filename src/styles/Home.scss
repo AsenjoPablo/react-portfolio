@@ -1,4 +1,53 @@
-body {
-  color: black;
-  font-size: 10rem;
+.accent {
+  color: rgb(132, 47, 243);
+}
+
+#main-home-container {
+  background-image: url("../img/sky.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #intro {
+    color: rgb(34, 34, 34);
+    background-color: rgb(255, 255, 255);
+    padding: 1.3rem;
+    border-radius: 16px 0;
+    width: fit-content;
+    height: fit-content;
+    margin: 3rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  #home-pad {
+    color: rgb(34, 34, 34);
+    background-color: rgb(255, 255, 255);
+    padding: 1.3rem;
+    border-radius: 16px 0;
+    width: fit-content;
+    height: fit-content;
+    margin: 3rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
 }

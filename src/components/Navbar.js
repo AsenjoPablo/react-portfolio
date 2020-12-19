@@ -2,25 +2,17 @@ import "../styles/Navbar.css";
 
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+import { Nav } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+
+const Navbar1 = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand ml-3" href="/">
-        &lt; Pablo Asenjo / &gt;
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav ml-auto mr-3">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Brand href="/">Pablo</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto"></Nav>
+        <Nav>
           <NavLink to="/" exact activeClassName="nav-item active">
             <a className="nav-link" href="/">
               Home
@@ -36,10 +28,10 @@ const Navbar = () => {
               Contacto
             </a>
           </NavLink>
-        </ul>
-      </div>
-    </nav>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default Navbar1;
