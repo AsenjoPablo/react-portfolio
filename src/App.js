@@ -11,17 +11,18 @@ import "./styles/App.css";
 function App() {
   return (
     <Router>
-      <Navbar />
-
-      {/*       <Route path="/" exact>
-        <Home />
-      </Route>
-      <Route path="/proyectos">
-        <Proyectos />
-      </Route>
-      <Route path="/contacto">
-        <Contacto />
-      </Route> */}
+      <div className="container-fluid bg-dark text-white">
+        <Navbar />
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/proyectos">
+          <Proyectos />
+        </Route>
+        <Route path="/contacto">
+          <Contacto />
+        </Route>
+      </div>
     </Router>
   );
 }
