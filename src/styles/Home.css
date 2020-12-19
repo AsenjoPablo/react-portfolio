@@ -20,6 +20,12 @@
           align-items: center;
 }
 
+#main-home-container .avatar {
+  width: 5rem;
+  border-radius: 16px;
+  margin-right: 1.4rem;
+}
+
 #main-home-container #intro,
 #main-home-container #respuesta-home {
   color: #222222;
@@ -33,6 +39,16 @@
   height: -moz-fit-content;
   height: fit-content;
   margin: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-shadow: 14px 13px 23px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 14px 13px 23px -6px rgba(0, 0, 0, 0.75);
 }
 
 #main-home-container #intro h1,
@@ -55,5 +71,6 @@
   color: white;
   border-radius: 0 16px;
   margin: 3rem;
+  text-align: right;
 }
 /*# sourceMappingURL=Home.css.map */
