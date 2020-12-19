@@ -15,24 +15,7 @@
   justify-content: center;
   align-items: center;
 
-  #intro {
-    color: rgb(34, 34, 34);
-    background-color: rgb(255, 255, 255);
-    padding: 1.3rem;
-    border-radius: 16px 0;
-    width: fit-content;
-    height: fit-content;
-    margin: 3rem;
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-    }
-  }
-
+  #intro,
   #home-pad {
     color: rgb(34, 34, 34);
     background-color: rgb(255, 255, 255);

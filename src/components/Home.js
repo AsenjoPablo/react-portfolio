@@ -6,9 +6,12 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Home = () => {
   return (
-    <Container fluid id="main-home-container">
+    <Container fluid id="main-home-container" className="m-0 p-0">
       <Row>
-        <Col lg={true} className="animate__animated animate__fadeInLeft">
+        <Col
+          lg={true}
+          className="animate__animated animate__fadeInLeft p-0 m-0"
+        >
           <Row id="intro">
             <div>
               <h1>¡Hola, mundo!</h1>
@@ -24,7 +27,6 @@ const Home = () => {
             </div>
           </Row>
         </Col>
-        <Col lg={true} className="animate__animated animate__fadeInRight"></Col>
       </Row>
     </Container>
   );

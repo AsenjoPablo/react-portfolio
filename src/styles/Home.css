@@ -20,28 +20,7 @@
           align-items: center;
 }
 
-#main-home-container #intro {
-  color: #222222;
-  background-color: white;
-  padding: 1.3rem;
-  border-radius: 16px 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 3rem;
-}
-
-#main-home-container #intro h1 {
-  font-size: 2rem;
-}
-
-#main-home-container #intro h3 {
-  font-size: 1.5rem;
-}
-
+#main-home-container #intro,
 #main-home-container #home-pad {
   color: #222222;
   background-color: white;
@@ -56,10 +35,12 @@
   margin: 3rem;
 }
 
+#main-home-container #intro h1,
 #main-home-container #home-pad h1 {
   font-size: 2rem;
 }
 
+#main-home-container #intro h3,
 #main-home-container #home-pad h3 {
   font-size: 1.5rem;
 }
