@@ -12,7 +12,7 @@ const Home = () => {
           </h2>
           <span className="orange">
             <em>
-              Welcome to my website rebuilt in ReactJS
+              Welcome to my website
               <br />
             </em>
           </span>
