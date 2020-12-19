@@ -1,46 +1,41 @@
 import "../styles/Navbar.css";
 
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a className="navbar-brand ml-3" href="/">
+        &lt; Pablo Asenjo / &gt;
+      </a>
       <button
-        aria-label="toggle menu on and off"
-        type="button"
         className="navbar-toggler"
-        data-target="#menu"
+        type="button"
         data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="menu">
-        <span
-          className="navbar-brand mr-auto shadowed"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://asenjopablo.github.io/"
-        >
-          <span className="orange">&lt; </span>
-          Pablo Asenjo
-          <span className="orange"> /&gt;</span>
-        </span>
-        <ul className="navbar-nav shadowed">
-          <li className="navbar-item active">
-            <a href="/" className="nav-link">
-              <i className="fa fa-home" aria-hidden="true"></i> HOME
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav ml-auto mr-3">
+          <NavLink to="/" exact activeClassName="nav-item active">
+            <a className="nav-link" href="/">
+              Home
             </a>
-          </li>
-
-          <li className="navbar-item">
-            <a href="/proyectos" className="nav-link">
-              <i className="fa fa-rocket" aria-hidden="true"></i> PROYECTOS
+          </NavLink>
+          <NavLink to="/proyectos" activeClassName="nav-item active">
+            <a className="nav-link" href="/proyectos">
+              Proyectos
             </a>
-          </li>
-
-          <li className="navbar-item">
-            <a href="/contacto" className="nav-link">
-              <i className="fa fa-envelope" aria-hidden="true"></i> CONTACTO
+          </NavLink>
+          <NavLink to="/contacto" activeClassName="nav-item active">
+            <a className="nav-link" href="/contacto">
+              Contacto
             </a>
-          </li>
+          </NavLink>
         </ul>
       </div>
     </nav>
