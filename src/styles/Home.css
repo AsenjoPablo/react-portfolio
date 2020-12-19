@@ -21,7 +21,7 @@
 }
 
 #main-home-container #intro,
-#main-home-container #home-pad {
+#main-home-container #respuesta-home {
   color: #222222;
   background-color: white;
   padding: 1.3rem;
@@ -36,12 +36,24 @@
 }
 
 #main-home-container #intro h1,
-#main-home-container #home-pad h1 {
+#main-home-container #respuesta-home h1 {
   font-size: 2rem;
 }
 
 #main-home-container #intro h3,
-#main-home-container #home-pad h3 {
+#main-home-container #respuesta-home h3 {
   font-size: 1.5rem;
+}
+
+#main-home-container #respuestas {
+  float: right;
+  margin-top: -3rem;
+}
+
+#main-home-container #respuesta-home {
+  background-color: #005dc0;
+  color: white;
+  border-radius: 0 16px;
+  margin: 3rem;
 }
 /*# sourceMappingURL=Home.css.map */

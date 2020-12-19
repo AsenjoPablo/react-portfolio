@@ -16,7 +16,7 @@
   align-items: center;
 
   #intro,
-  #home-pad {
+  #respuesta-home {
     color: rgb(34, 34, 34);
     background-color: rgb(255, 255, 255);
     padding: 1.3rem;
@@ -32,5 +32,19 @@
     h3 {
       font-size: 1.5rem;
     }
+  }
+
+  #respuestas {
+    float: right;
+    margin-top: -3rem;
+  }
+
+  #respuesta-home {
+    background-color: rgb(0, 93, 192);
+    color: white;
+
+    border-radius: 0 16px;
+
+    margin: 3rem;
   }
 }

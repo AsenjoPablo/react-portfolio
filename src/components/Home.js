@@ -21,11 +21,23 @@ const Home = () => {
               </h3>
             </div>
           </Row>
-          <Row id="home-pad">
+          <Row id="intro">
             <div>
-              <h1>¿Qué te gustaría saber de mí?</h1>
+              <h3>¿Qué te gustaría saber de mí?</h3>
             </div>
           </Row>
+          <div id="respuestas">
+            <Row id="respuesta-home">
+              <div>
+                <h3>Quiero ver tus proyectos</h3>
+              </div>
+            </Row>
+            <Row id="respuesta-home">
+              <div>
+                <h3>Quiero ver tu currículum</h3>
+              </div>
+            </Row>
+          </div>
         </Col>
       </Row>
     </Container>
