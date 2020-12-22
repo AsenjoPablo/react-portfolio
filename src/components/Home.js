@@ -4,8 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import avatar from "../img/avatar.png";
 
-// img imports
-
 const Home = () => {
   return (
     <Container

@@ -9,7 +9,6 @@
   background-size: cover;
 
   width: 100vw;
-  height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -19,6 +18,10 @@
     width: 5rem;
     border-radius: 16px;
     margin-right: 1.4rem;
+  }
+
+  #preguntas {
+    margin-top: 5rem;
   }
 
   #intro,
