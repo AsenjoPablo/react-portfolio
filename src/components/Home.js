@@ -57,6 +57,10 @@ const HomeButton = styled.button`
   border-radius: 16px;
   padding: 1.2rem;
   font-size: 1.5rem;
+
+  & * {
+    padding: 0.5rem;
+  }
 `;
 
 const Home = () => {
@@ -71,7 +75,9 @@ const Home = () => {
           <br />
           Desarrollador FullStack
         </h2>
-        <HomeButton> ¿empezamos? </HomeButton>
+        <HomeButton>
+          ¿empezamos? <i className="fas fa-arrow-right"></i>
+        </HomeButton>
       </HomeLeft>
     </MainContainer>
   );
