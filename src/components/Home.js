@@ -20,8 +20,9 @@ const MainContainer = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1300px) {
     flex-direction: column;
+    background-position: right;
   }
 `;
 
@@ -41,8 +42,18 @@ const HomeLeft = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media (max-width: 600px) {
+  & h1 {
+    font-size: 2.2rem;
+  }
+
+  & h2 {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  @media (max-width: 1300px) {
     width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
 
     & * {
       font-size: 1.8rem;
