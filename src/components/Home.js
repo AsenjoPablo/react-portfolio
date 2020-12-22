@@ -14,8 +14,6 @@ const MainContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-<<<<<<< HEAD
-=======
   color: white;
 
   & * {
@@ -76,7 +74,6 @@ const HomeButton = styled.button`
   }
 `;
 
->>>>>>> 6010c30ed87a23555271579c08495df340706201
 const Home = () => {
   return (
     <MainContainer>
