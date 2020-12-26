@@ -13,38 +13,52 @@ const Nav = styled.nav`
 
   width: 100vw;
   max-width: 100%;
-
+  height: fit-content;
   position: absolute;
+
+  z-index: 1;
 
   & #menu-opener {
     padding: 1.5rem;
     display: none;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 660px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
+    position: fixed;
+
+    background: black;
+
     #menu-opener {
       display: flex;
+      padding: 1rem;
       align-items: flex-start;
     }
 
     & ul {
       flex-direction: column;
-      height: 130px;
-      transition: height 2s ease;
+      justify-content: flex-start;
+      height: 100px;
+      transition: all 1s ease;
+      background: black;
+      border-bottom: solid 1px white;
     }
 
     & li {
       justify-content: flex-start;
-      align-items: flex-start;
     }
 
     .hide {
       /* Ocultación en dispositivos móviles */
-      display: none;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      & * {
+        display: none;
+      }
     }
   }
 `;
@@ -59,6 +73,10 @@ const MenuList = styled.ul`
   padding: 1rem;
 
   justify-content: flex-end;
+
+  @media (max-width: 660px) {
+    justify-content: center;
+  }
 `;
 
 const MenuLink = styled.li`
@@ -73,7 +91,7 @@ const MenuLink = styled.li`
 
   font-size: 24px;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 660px) {
     margin-left: 0rem;
   }
 `;
@@ -106,15 +124,21 @@ const Navbar = () => {
         </div>
         <MenuList className={showingMenu ? "" : "hide"}>
           <MenuLink>
-            <StyledLink exact to="/">
+            <StyledLink
+              exact
+              to="/"
+              className="animate__animated animate__fadeIn"
+            >
               Home
             </StyledLink>
           </MenuLink>
           <MenuLink>
-            <StyledLink to="/proyectos">Proyectos</StyledLink>
-          </MenuLink>
-          <MenuLink>
-            <StyledLink to="/contacto">Contacto</StyledLink>
+            <StyledLink
+              to="/contacto"
+              className="animate__animated animate__fadeIn"
+            >
+              Contacto
+            </StyledLink>
           </MenuLink>
         </MenuList>
       </Nav>
