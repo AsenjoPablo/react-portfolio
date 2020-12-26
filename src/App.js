@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // componentes
+import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Proyectos from "./components/Proyectos";
 
 // estilos
 import "./styles/App.css";
@@ -9,12 +11,9 @@ import "./styles/App.css";
 function App() {
   return (
     <Router>
-      <Route path="/" exact>
-        <Home />
-      </Route>
-      <Route path="/proyectos">
-        <h1>proyectos</h1>
-      </Route>
+      <Navbar />
+      <Route path="/" exact component={Home} />
+      <Route path="/proyectos" component={Proyectos} />
       <Route path="/contacto">
         <h1>contacto</h1>
       </Route>

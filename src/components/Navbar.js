@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
 
+import { NavLink } from "react-router-dom";
+
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;
@@ -76,12 +78,16 @@ const MenuLink = styled.li`
   }
 `;
 
-const Link = styled.a`
+const activeClassName = "nav-active";
+const StyledLink = styled(NavLink).attrs({ activeClassName })`
   color: white;
 
   &:hover {
     color: #aaa;
     text-decoration: none;
+  }
+  &.${activeClassName} {
+    color: orange;
   }
 `;
 
@@ -100,13 +106,15 @@ const Navbar = () => {
         </div>
         <MenuList className={showingMenu ? "" : "hide"}>
           <MenuLink>
-            <Link href="/">Home</Link>
+            <StyledLink exact to="/">
+              Home
+            </StyledLink>
           </MenuLink>
           <MenuLink>
-            <Link href="/proyectos">Proyectos</Link>
+            <StyledLink to="/proyectos">Proyectos</StyledLink>
           </MenuLink>
           <MenuLink>
-            <Link href="contacto">Contacto</Link>
+            <StyledLink to="/contacto">Contacto</StyledLink>
           </MenuLink>
         </MenuList>
       </Nav>

@@ -1,30 +1,6 @@
 import styled from "styled-components";
-import background from "../img/sky.jpg";
 
-import Navbar from "./Navbar";
-
-const MainContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  background: url(${background});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: white;
-
-  & * {
-    text-align: center;
-  }
-
-  @media (max-width: 1300px) {
-    flex-direction: column;
-    background-position: right;
-  }
-`;
+import MainContainer from "./MainContainer";
 
 const HomeLeft = styled.div`
   display: flex;
@@ -51,6 +27,8 @@ const HomeLeft = styled.div`
     padding-left: 2rem;
   }
 
+  --animate-delay: 0.3s; // la velocidad es un tercio del valor de clase para este elemento
+
   @media (max-width: 1300px) {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.6);
@@ -68,25 +46,31 @@ const HomeButton = styled.button`
   border-radius: 16px;
   padding: 1.2rem;
   font-size: 1.5rem;
+  transition: 0.2s ease-in-out; // transición de vuelta
 
   & * {
     padding: 0.5rem;
+  }
+
+  :hover {
+    transition: 0.2s ease-in-out; // transición de ida
+    padding: 0.9rem;
+    margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
   }
 `;
 
 const Home = () => {
   return (
     <MainContainer>
-      <Navbar />
-
       <HomeLeft>
-        <h1>¡Hola, mundo!</h1>
-        <h2>
+        <h1 className="animate__animated animate__fadeIn">¡Hola, mundo!</h1>
+        <h2 className="animate__animated animate__fadeIn animate__delay-1s">
           Soy <span style={{ color: "orange" }}>Pablo Asenjo</span>,
           <br />
           Desarrollador FullStack
         </h2>
-        <HomeButton>
+        <HomeButton className="animate__animated animate__slideInLeft">
           ¿empezamos? <i className="fas fa-arrow-right"></i>
         </HomeButton>
       </HomeLeft>
