@@ -12,11 +12,14 @@ const HomeContent = styled.div`
   flex-direction: column;
 
   width: ${(props) => (props.left ? "50%" : "100%")};
+  float: left;
   height: 100%;
   min-height: 100vh;
-  transition: width 1s;
+  transition: width 800ms;
   padding: 10%;
-  background-color: rgba(0, 0, 0, 0.7);
+
+  background: ${(props) =>
+    props.left ? "rgba(10,10,10,0.8)" : "rgba(0,0,0,0.8)"};
 
   justify-content: center;
   align-items: center;
@@ -41,11 +44,6 @@ const HomeContent = styled.div`
     margin-left: 0;
     width: 100vw;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-
-    & * {
-      font-size: 1.8rem;
-    }
   }
 `;
 
@@ -57,6 +55,8 @@ const HomeButton = styled.button`
   padding: 1.2rem;
   font-size: 1.5rem;
   transition: 0.2s ease-in-out; // transición de vuelta
+  height: 5rem;
+  width: 20rem;
 
   & * {
     padding: 0.5rem;
@@ -75,6 +75,7 @@ const WelcomeSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: 660px) {
     height: 90vh;
@@ -118,30 +119,10 @@ const HomeProyectos = styled.div`
   }
 `;
 
-const ProyectosMensaje = styled.div`
-  width: 50%;
-  height: 33%;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  @media (max-width: 660px) {
-    width: 100%;
-    margin: 0;
-  }
-`;
-
 // sección "empezada"
 const MuestraProyectos = () => {
   return (
     <HomeProyectos>
-      <ProyectosMensaje className="animate__animated animate__fadeIn animate__delay-2s">
-        <h1>Spotlight</h1>
-        <h3>Echa un vistazo a mis últimos proyectos destacados:</h3>
-      </ProyectosMensaje>
       <Proyectos />
     </HomeProyectos>
   );

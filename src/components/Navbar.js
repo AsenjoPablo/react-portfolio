@@ -8,7 +8,7 @@ const Nav = styled.nav`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
   color: white;
 
   width: 100vw;
@@ -42,9 +42,8 @@ const Nav = styled.nav`
       flex-direction: column;
       justify-content: flex-start;
       height: 100px;
-      transition: all 1s ease;
+      transition: all 500ms ease;
       background: black;
-      border-bottom: solid 1px white;
     }
 
     & li {

@@ -1,34 +1,138 @@
 import { data } from "../data-proyectos/data";
 import styled from "styled-components";
 
-import phonepic from "../img/phone.jpg";
+var valor = 15;
 
-const ContenedorProyectos = styled.div`
-  background: red;
+var proporcionProyecto = `${valor}rem`;
 
+var proporcionProyectoEnlace = `${valor / 1.2}rem`;
+
+const ContenedorGeneral = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+`;
+
+const CabeceraProyectos = styled.div`
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 2px black;
+
+  & h1 {
+    font-weight: 600;
+    padding: 2rem;
+    border-bottom: solid 2px white;
+  }
+
+  & h3 {
+    margin-bottom: 0;
+  }
+`;
+
+const ContenedorProyectos = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  padding: 1.3rem;
+  border-radius: 16px;
+
+  @media (max-width: 660px) {
+    flex-direction: column;
+  }
+`;
+
+const Proyecto = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  padding: 1.3rem;
+  border-radius: 16px;
   & img {
-    width: 100%;
+    width: ${proporcionProyecto};
+    height: ${proporcionProyecto};
+    border-radius: 16px;
+    box-shadow: 2px 2px 15px black;
+
+    margin-bottom: 2rem;
+  }
+
+  & h2 {
+    border-bottom: solid 1px white;
+    padding-bottom: 0.5rem;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.3rem;
   }
 
   @media (max-width: 660px) {
-    width: 100%;
+    padding-bottom: 2.5rem;
+    img {
+      width: ${proporcionProyectoEnlace};
+      height: ${proporcionProyectoEnlace};
+    }
+  }
+`;
+
+const EnlaceProyecto = styled.button`
+  border: none;
+  color: white;
+  background-color: #007bd3;
+  width: ${proporcionProyectoEnlace};
+  height: 3rem;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+
+  cursor: pointer;
+  box-shadow: 5px 8px 15px black;
+
+  transition: all 500ms;
+
+  &:hover {
+    box-shadow: 2px 2px 20px black;
+  }
+
+  @media (max-width: 660px) {
+    height: 3rem;
+    width: 13rem;
+
+    font-size: 1rem;
   }
 `;
 
 const Proyectos = () => {
   return (
-    <ContenedorProyectos>
-      {data.map((data, key) => {
-        return (
-          <a key={key} href={data.link}>
-            <img src={phonepic} />
-            <p className="legend">{data.name}</p>
-          </a>
-        );
-      })}
-    </ContenedorProyectos>
+    <ContenedorGeneral>
+      <CabeceraProyectos className="animate__animated animate__fadeIn animate__delay-1s">
+        <h1>SPOTLIGHT</h1>
+        <h3>Mis últimos proyectos:</h3>
+      </CabeceraProyectos>
+      <ContenedorProyectos className="animate__animated animate__fadeIn animate__delay-1s">
+        {data.map((data, key) => {
+          return (
+            <Proyecto key={key}>
+              <img src={data.img} alt="imagen del proyecto" />
+              <h2>{data.name}</h2>
+              <EnlaceProyecto href={data.link}>
+                VISÍTALO <i className="fas fa-external-link-alt"></i>
+              </EnlaceProyecto>
+            </Proyecto>
+          );
+        })}
+      </ContenedorProyectos>
+    </ContenedorGeneral>
   );
 };
 
