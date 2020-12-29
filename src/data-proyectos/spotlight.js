@@ -14,7 +14,7 @@ export const data = [
   {
     name: "Android Math",
     tech: "Java",
-    link: "https://github.com",
+    link: "https://github.com/AsenjoPablo/android-calculator",
     img: "./img/androidcalc.png",
   },
 ];
