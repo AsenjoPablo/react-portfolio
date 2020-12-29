@@ -110,7 +110,7 @@ const Contacto = styled.a`
 
   &:active {
     text-decoration: none;
-    transform: scale(1.8) skew(-2deg);
+    transform: scale(0.9) skew(-2deg);
   }
 
   @media (max-width: 660px) {

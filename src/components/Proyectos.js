@@ -97,9 +97,12 @@ const Proyecto = styled.a`
     transform: scale(1.1) skew(-1deg);
   }
 
-  &:active {
-    text-decoration: none;
-    transform: scale(1.5) skew(-8deg);
+  @media (min-width: 960px) {
+    // efecto push solo aplica en resolución mayor para evitar drag en mobile
+    &:active {
+      text-decoration: none;
+      transform: scale(0.9) skew(-8deg);
+    }
   }
 
   @media (max-width: 660px) {
