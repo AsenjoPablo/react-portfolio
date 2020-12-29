@@ -8,7 +8,7 @@ export const data = [
   {
     name: "Marketplace",
     tech: "Bootstrap + JQuery",
-    link: "https://www.asenjoserrano.com/projects/marketplace/",
+    link: "https://pablo-asenjo-marketplace.netlify.app/",
     img: "./img/marketplace.png",
   },
   {
