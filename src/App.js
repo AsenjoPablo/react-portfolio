@@ -7,6 +7,7 @@ import Proyectos from "./components/Proyectos";
 
 // estilos
 import "./styles/App.css";
+import SeccionContacto from "./components/SeccionContacto";
 
 function App() {
   return (
@@ -14,9 +15,7 @@ function App() {
       <Navbar />
       <Route path="/" exact component={Home} />
       <Route path="/proyectos" component={Proyectos} />
-      <Route path="/contacto">
-        <h1>contacto</h1>
-      </Route>
+      <Route path="/contacto" component={SeccionContacto} />
     </Router>
   );
 }

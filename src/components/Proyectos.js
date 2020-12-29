@@ -29,6 +29,10 @@ const CabeceraProyectos = styled.div`
   & h3 {
     margin-bottom: 0;
   }
+
+  & span {
+    color: orange;
+  }
 `;
 
 const ContenedorProyectos = styled.div`
@@ -45,7 +49,18 @@ const ContenedorProyectos = styled.div`
   }
 `;
 
-const Proyecto = styled.div`
+// TEMPORIZADOR PARA ANIMACIÓN ANTES DE ABRIR LINK
+const timedLeave = (e, link) => {
+  e.preventDefault();
+
+  setTimeout(() => {
+    console.log("timeout starts");
+    window.open(link);
+  }, 500);
+};
+
+const Proyecto = styled.a`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
 
@@ -55,7 +70,10 @@ const Proyecto = styled.div`
   color: white;
 
   padding: 1.3rem;
+  margin: 5%;
   border-radius: 16px;
+
+  transition: all 300ms;
   & img {
     width: ${proporcionProyecto};
     height: ${proporcionProyecto};
@@ -63,6 +81,8 @@ const Proyecto = styled.div`
     box-shadow: 2px 2px 15px black;
 
     margin-bottom: 2rem;
+
+    object-fit: cover;
   }
 
   & h2 {
@@ -70,6 +90,16 @@ const Proyecto = styled.div`
     padding-bottom: 0.5rem;
     text-shadow: 2px 2px 2px black;
     font-size: 1.3rem;
+  }
+
+  &:hover {
+    text-decoration: none;
+    transform: scale(1.1) skew(-1deg);
+  }
+
+  &:active {
+    text-decoration: none;
+    transform: scale(1.5) skew(-8deg);
   }
 
   @media (max-width: 660px) {
@@ -117,12 +147,14 @@ const Proyectos = () => {
     <ContenedorGeneral>
       <CabeceraProyectos className="animate__animated animate__fadeIn animate__delay-1s">
         <h1>SPOTLIGHT</h1>
-        <h3>Mis últimos proyectos:</h3>
+        <h3>
+          Mis últimos <span>proyectos:</span>
+        </h3>
       </CabeceraProyectos>
       <ContenedorProyectos className="animate__animated animate__fadeIn animate__delay-1s">
         {data.map((data, key) => {
           return (
-            <Proyecto key={key}>
+            <Proyecto key={key} onClick={(e) => timedLeave(e, data.link)}>
               <img src={data.img} alt="imagen del proyecto" />
               <h2>{data.name}</h2>
               <EnlaceProyecto href={data.link}>

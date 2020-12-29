@@ -138,7 +138,7 @@ const Home = () => {
 
   return (
     <MainContainer>
-      <HomeContent left={left}>
+      <HomeContent left={left} className="animate__animated animate__fadeIn">
         {left ? <Welcome switchSide={switchSide} /> : <MuestraProyectos />}
       </HomeContent>
     </MainContainer>
