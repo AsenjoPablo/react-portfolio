@@ -1,4 +1,5 @@
-import { data } from "../data-proyectos/data";
+import { data } from "../data-proyectos/spotlight";
+import { otros } from "../data-proyectos/otrosProyectos";
 import styled from "styled-components";
 
 var valor = 15;
@@ -36,8 +37,10 @@ const CabeceraProyectos = styled.div`
 `;
 
 const ContenedorProyectos = styled.div`
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
 
   justify-content: center;
   align-items: center;
@@ -61,6 +64,8 @@ const timedLeave = (e, link) => {
 
 const Proyecto = styled.a`
   cursor: pointer;
+  align-self: center;
+  justify-self: center;
   display: flex;
   flex-direction: column;
 
@@ -156,6 +161,23 @@ const Proyectos = () => {
       </CabeceraProyectos>
       <ContenedorProyectos className="animate__animated animate__fadeIn animate__delay-1s">
         {data.map((data, key) => {
+          return (
+            <Proyecto key={key} onClick={(e) => timedLeave(e, data.link)}>
+              <img src={data.img} alt="imagen del proyecto" />
+              <h2>{data.name}</h2>
+              <EnlaceProyecto href={data.link}>
+                VISÍTALO <i className="fas fa-external-link-alt"></i>
+              </EnlaceProyecto>
+            </Proyecto>
+          );
+        })}
+      </ContenedorProyectos>
+      <CabeceraProyectos className="animate__animated animate__fadeIn animate__delay-1s">
+        <h1>Otros</h1>
+        <h3>Proyectos menores</h3>
+      </CabeceraProyectos>
+      <ContenedorProyectos className="animate__animated animate__fadeIn animate__delay-1s">
+        {otros.map((data, key) => {
           return (
             <Proyecto key={key} onClick={(e) => timedLeave(e, data.link)}>
               <img src={data.img} alt="imagen del proyecto" />
