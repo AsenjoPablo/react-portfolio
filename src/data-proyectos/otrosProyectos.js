@@ -29,4 +29,10 @@ export const otros = [
     link: "https://codepen.io/asenjopablo/full/oNbxxqr",
     img: "./img/documentacion.png",
   },
+  {
+    name: "Marketplace",
+    tech: "Bootstrap + JQuery",
+    link: "https://pablo-asenjo-marketplace.netlify.app/",
+    img: "./img/marketplace.png",
+  },
 ];
